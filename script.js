@@ -27,6 +27,8 @@ buttons.forEach((button) => {
       return;
     } else if (content === "-") {
       display2.textContent = "-" + display2.textContent;
+    } else if (display2.textContent === "" && operation != null) {
+      return;
     } else {
       if (operation != null) {
         display.textContent = `${display2.textContent} ${operation}`;
