@@ -1,4 +1,4 @@
-# calculator
+# Calculator app
 
 ## This calculator app can do the basic calculations. However, there is some improvements needed. e.g.
 
