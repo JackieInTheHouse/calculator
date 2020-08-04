@@ -2,5 +2,4 @@
 
 ## This calculator app can do the basic calculations. However, there is some improvements needed. e.g.
 
-- To calculate the first value and second value without enter the equal operator, but do the calculation with other operator is following,
-  for instance: '3 + 5' following by another operator '+' will calculate the '3 + 5' first then add the '+' operator as result in '8 +'.
+- After getting a result of two values, enter a number, this new entered number should overwrites the result, but new number is appened to the previous result which is not the desirable outcome.
