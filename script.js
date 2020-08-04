@@ -29,6 +29,22 @@ buttons.forEach((button) => {
       display2.textContent = "-" + display2.textContent;
     } else if (display2.textContent === "" && operation != null) {
       return;
+    } else if (
+      display.textContent !== "" &&
+      display2.textContent !== "" &&
+      operation
+    ) {
+      const getTotal = `${display.textContent} ${display2.textContent}`;
+      let result = eval(getTotal);
+      display2.textContent = result;
+      display.textContent = "";
+      display2.textContent += " " + operation;
+      if (operation != null) {
+        display.textContent = `${display2.textContent}`;
+        display2.textContent = "";
+      } else {
+        display2.textContent += content;
+      }
     } else {
       if (operation != null) {
         display.textContent = `${display2.textContent} ${operation}`;
@@ -40,10 +56,13 @@ buttons.forEach((button) => {
   });
 });
 equal.addEventListener("click", () => {
-  const newValue = `${display.textContent} ${display2.textContent}`;
-  let result = eval(newValue);
-  display.textContent = newValue;
-  display2.textContent = result;
+  if (display.textContent === "" || display2.textContent === "") {
+    return;
+  }
+  const values = `${display.textContent} ${display2.textContent}`;
+  let total = eval(values);
+  display.textContent = "";
+  display2.textContent = total;
 });
 
 clearAll.addEventListener("click", () => {
