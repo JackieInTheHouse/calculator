@@ -26,6 +26,8 @@ buttons.forEach((button) => {
       }
     } else if (content === "." && display2.textContent.includes(".")) {
       return;
+    } else if (content === "-" && display2.textContent.includes("-")) {
+      return;
     } else if (content === "-") {
       display2.textContent = "-" + display2.textContent;
     } else if (display2.textContent === "" && operation != null) {
