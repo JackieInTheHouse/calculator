@@ -12,14 +12,15 @@ buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
     let content = button.getAttribute("data-action");
     let operation = button.getAttribute("data-operation");
-    if (display2.textContent === "0") {
+    if (display2.textContent === "0" && content === ".") {
+      display2.textContent += content;
+    } else if (display2.textContent === "0") {
       display2.textContent = content;
       if (
         operation === "+" ||
         operation === "-" ||
         operation === "*" ||
-        operation === "/" ||
-        operation === "."
+        operation === "/"
       ) {
         display.textContent = 0 + " " + operation;
       }
